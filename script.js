@@ -441,9 +441,13 @@ function initMap() {
 
   // make the controls
   var centerControlDiv = document.createElement('div');
+  var topCenterControlDiv = document.createElement('div');
   var centerControl = new CenterControl(centerControlDiv, map);
+  var topCenterControl = new TopControl(topCenterControlDiv, map);
   centerControlDiv.index = 1;
+  topCenterControlDiv.index = 2;
   map.controls[google.maps.ControlPosition.LEFT_CENTER].push(centerControlDiv);
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(topCenterControlDiv);
 
   makeInfoWindows();
   makePartyTravel();
@@ -459,9 +463,9 @@ function CenterControl(controlDiv, map) {
   controlUI.style.borderRadius = '3px';
   controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
   controlUI.style.cursor = 'pointer';
-  controlUI.style.marginBottom = '22px';
+  // controlUI.style.marginBottom = '22px';
   controlUI.style.textAlign = 'center';
-  controlUI.title = 'Click to drop markers';
+  controlUI.title = 'Click to drop all markers';
   controlDiv.appendChild(controlUI);
   var controlUI2 = document.createElement('div');
   controlUI2.style.backgroundColor = '#fff';
@@ -469,10 +473,20 @@ function CenterControl(controlDiv, map) {
   controlUI2.style.borderRadius = '3px';
   controlUI2.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
   controlUI2.style.cursor = 'pointer';
-  controlUI2.style.marginBottom = '22px';
+  // controlUI2.style.marginBottom = '22px';
   controlUI2.style.textAlign = 'center';
   controlUI2.title = 'Click to drop castle markers';
   controlDiv.appendChild(controlUI2);
+  var controlUI3 = document.createElement('div');
+  controlUI3.style.backgroundColor = '#fff';
+  controlUI3.style.border = '2px solid #fff';
+  controlUI3.style.borderRadius = '3px';
+  controlUI3.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI3.style.cursor = 'pointer';
+  // controlUI3.style.marginBottom = '22px';
+  controlUI3.style.textAlign = 'center';
+  controlUI3.title = 'Click to drop story markers';
+  controlDiv.appendChild(controlUI3);
 
   // Set CSS for the control interior.
   var controlText = document.createElement('div');
@@ -482,7 +496,7 @@ function CenterControl(controlDiv, map) {
   controlText.style.lineHeight = '38px';
   controlText.style.paddingLeft = '5px';
   controlText.style.paddingRight = '5px';
-  controlText.innerHTML = 'Drop Markers';
+  controlText.innerHTML = 'Drop All Markers';
   controlUI.appendChild(controlText);
   var controlText2 = document.createElement('div');
   controlText2.style.color = 'rgb(25,25,25)';
@@ -493,10 +507,48 @@ function CenterControl(controlDiv, map) {
   controlText2.style.paddingRight = '5px';
   controlText2.innerHTML = 'Drop Castle Markers';
   controlUI2.appendChild(controlText2);
+  var controlText3 = document.createElement('div');
+  controlText3.style.color = 'rgb(25,25,25)';
+  controlText3.style.fontFamily = 'Roboto,Arial,sans-serif';
+  controlText3.style.fontSize = '16px';
+  controlText3.style.lineHeight = '38px';
+  controlText3.style.paddingLeft = '5px';
+  controlText3.style.paddingRight = '5px';
+  controlText3.innerHTML = 'Drop Story Markers';
+  controlUI3.appendChild(controlText3);
 
   // add the event listener
   controlUI.addEventListener('click', drop);
   controlUI2.addEventListener('click', dropOnlyCastles);
+  controlUI3.addEventListener('click', showStoryMarkers);
+}
+
+function TopControl(controlDiv, map) {
+  // Set CSS for the Control Border
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = '#fff';
+  controlUI.style.border = '2px solid #fff';
+  controlUI.style.borderRadius = '3px';
+  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.marginBottom = '22px';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to animate party travel';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.color = 'rgb(25,25,25)';
+  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+  controlText.style.fontSize = '16px';
+  controlText.style.lineHeight = '38px';
+  controlText.style.paddingLeft = '5px';
+  controlText.style.paddingRight = '5px';
+  controlText.innerHTML = 'Animate Party Travel';
+  controlUI.appendChild(controlText);
+
+  // add the event listener
+  controlUI.addEventListener('click', animateColorPolyLine);
 }
 
 function setZoomableMarkerIcon(marker, zoom) {
