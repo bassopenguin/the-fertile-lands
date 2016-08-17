@@ -178,47 +178,6 @@ function initPartyTravelPath() {
   console.log("initPartyTravelPath finished");
 }
 
-// var poly;
-//
-// function animatePolyLine() {
-//   console.log("animatePolyLine started");
-//
-//   if (poly != null)
-//     poly.setMap(null);
-//
-//   poly = new google.maps.Polyline({
-//     strokeColor: '#ff0000',
-//     strokeOpacity: 1.0,
-//     strokeWeight: 3
-//   });
-//   poly.setMap(map);
-//
-//   var t = 500;
-//   var theWay = poly.getPath();
-//
-//   var step = 0;
-//   var maxSteps = partyTravel.length;
-//   var secondsToDraw = 1000;
-//   t = secondsToDraw / maxSteps;
-//   console.log("maxSteps: " + maxSteps);
-//   var interval = setInterval(function () {
-//     if (step >= maxSteps)
-//       clearInterval(interval);
-//     else {
-//       console.log("step " + step);
-//       console.log("adding point (" + (step) + ", " + (step * 5) + ")");
-//       console.log("real point (" + partyTravel[step].lat + ", " + partyTravel[step].lng + ")");
-//       // theWay.push(new google.maps.LatLng(step, step * 5));
-//       theWay.push(new google.maps.LatLng(partyTravel[step].lat, partyTravel[step].lng));
-//       if (step == 10)
-//         poly.setOptions({strokeColor: 'blue'});
-//       step++;
-//     }
-//   }, t);
-//
-//   console.log("animatePolyLine finished");
-// }
-
 var polys = [];
 function animateColorPolyLine() {
   console.log("animateColorPolyLine started");
@@ -476,21 +435,6 @@ function initMap() {
       setZoomableMarkerIcon(markers[midx], zoom);
     }
   });
-
-  // var rectangle = new google.maps.Rectangle({
-  //   strokeColor: '#FF0000',
-  //   strokeOpacity: 0.8,
-  //   strokeWeight: 2,
-  //   fillColor: '#FF0000',
-  //   fillOpacity: 0.35,
-  //   map: map,
-  //   bounds: {
-  //     north: 85,
-  //     south: -85,
-  //     east: 178,
-  //     west: -178
-  //   }
-  // });
 
   map.mapTypes.set('tfl', imgMapType);
   map.setMapTypeId('tfl');
