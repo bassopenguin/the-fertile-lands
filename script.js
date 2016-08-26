@@ -40,7 +40,7 @@ var everly = [
   ["Everly\'s early life", -26.391870, 12.568359, 'brown_MarkerE.png', -1, false, 500]
 ];
 var fruven = [
-  ["Fruven\'s early life", -33.724340, 26.367188, 'paleblue_MarkerF.png', -1, false, 500]
+  ["Fruven\'s early life", -30.751278, 62.050781, 'paleblue_MarkerF.png', -1, false, 500]
 ];
 var terevalis = [
   ["Terevalis\' early life", -29.554345, 7.053223, 'green_MarkerT.png', -1, false, 500]
@@ -75,7 +75,8 @@ var storyMarkers = [
   ['Jahmal of the Waste', -40.111689, -17.226563, 'skull.png', 2, false, 100],
   ['Seal\'s Journal', 62.633770, -15.644531, 'googleMarkers/questionMark-2-medium.png', 3, false, 100],
   ['Hold Fast!', -76.351896, 57.480469, 'googleMarkers/questionMark-2-medium.png', 4, false, 100],
-  ['A Meeting in Shadow', 11.393879, 16.699219, 'googleMarkers/questionMark-2-medium.png', 5, false, 100]//,
+  ['A Meeting in Shadow', 11.393879, 16.699219, 'googleMarkers/questionMark-2-medium.png', 5, false, 100],
+  ['The Old Woman and the Deep Water', -35.029996, 28.212891, 'googleMarkers/questionMark-2-medium.png', 6, false, 100]//,
 ]
 
 var contentStrings = [
@@ -85,6 +86,7 @@ var contentStrings = [
   '<div id="seal-content"><h1>Seal\'s Journal</h1><div><p>Seal is a character in an episode north of Altbasar. His journal entries are dire, but we do not know if he is alive.</p><p><a href="http://the-fertile-lands.obsidianportal.com/wikis/seals-journal" target="_blank">Read story.</a></p></div></div>',
   '<div id="hold-fast-content"><h1>Hold Fast!</h1><div><p>Captain Westwind and his crew are underway, but he has a harsh punishment in mind for those in his crew that disobey.</p><p><a href="http://the-fertile-lands.obsidianportal.com/wikis/hold-fast" target="_blank">Read story.</a></p></div></div>',
   '<div id="meeting-in-shadow-content"><h1>A Meeting in Shadow</h1><div><p>Two figures meet in an underground cave to discuss their next move; tensions are high between them.</p><p><a href="http://the-fertile-lands.obsidianportal.com/wikis/a-meeting-in-shadow" target="_blank">Read story.</a></p></div></div>',
+  '<div id="old-woman-deep-water-content"><h1>The Old Woman and the Deep Water</h1><div><p>An old woman walks and sits on the beach reminiscing about strange events.</p><p><a href="http://the-fertile-lands.obsidianportal.com/wikis/the-old-woman-and-the-deep-water" target="_blank">Read Story.</a></p></div></div>',
   '<div id="turin-content"><h1>Turin</h1><h2>The Most Vibrant City in the World...</h2></div>',
   '<div id="the-hill-content"><h1>The Hill</h1><h2>An old, abandonded iron mine.</h2><p>The Party found, battled, and defeated nine gnolls in the mine before caving in the west entrance and leaving.</p><p>From the fight, the party gained experience, some treasure, and two letters written to Marc, the former forman of the mine</p></div>'
 ];
