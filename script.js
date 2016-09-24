@@ -55,7 +55,7 @@ var castles = [
   ["Riedhof", -0.571280, 18.259277, 'googleMarkers/historic-1-smallz0.png', -1, true, 250],
   // ["Riedhof Bridge", -2.679687, 13.557129, 'googleMarkers/bridge-1-small.png', -1, true]//,
   ["Omsk", 18.458768, -10.129395, 'googleMarkers/historic-2-medium.png', -1, true, 250],
-  ["Turin", -29.439598, 6.767578, 'googleMarkers/historic-1-smallz0.png', 3, true, 250],
+  ["Turin", -29.439598, 6.767578, 'googleMarkers/historic-1-smallz0.png', 7, true, 250],
   ["Meribor", -24.627045, 52.075195, 'googleMarkers/historic-1-smallz0.png', -1, true, 250]
 ];
 
@@ -63,7 +63,7 @@ var poi = [
   ["Mill", -0.109863, 16.083984, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50],
   ["Brendon\'s shack", 0.593251, 16.853027, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50],
   ["The Twins", 2.043024, 16.655273, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50], // old location: 2.328460, 16.523438
-  ["The Hill", /*3.272146, 16.523438*/ 3.250209, 16.523438, 'googleMarkers/browngeneric-1-smallz0.png', 4, true, 50],
+  ["The Hill", /*3.272146, 16.523438*/ 3.250209, 16.523438, 'googleMarkers/browngeneric-1-smallz0.png', 8, true, 50],
   ["Shack by the Isar", 5.703448, 29.289551, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50],
   ["Gnoll and hyena tracks", 6.664608, 28.037109, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50],
   ["Rundown hut and a monsterous spider", 19.849394, 35.837402, 'googleMarkers/browngeneric-1-smallz0.png', -1, true, 50],
